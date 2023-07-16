@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FocusFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="00:00" textAlignment="center" id="zys-1D-7oa">
+                                <rect key="frame" x="73" y="384" width="244" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWJ-Fc-ebf">
+                                <rect key="frame" x="174" y="490" width="44" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="chronoController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pIe-3e-Q5I"/>
+                                    <action selector="startChrono:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5tO-82-uB2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kF7-wk-pQW">
+                                <rect key="frame" x="168" y="550" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="stop.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="stopChrono:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nqy-z4-YVJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOT-ir-Ox4">
+                                <rect key="frame" x="170" y="610" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="restartChrono:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BAc-aV-26Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eM2-Ec-OyA">
+                                <rect key="frame" x="171" y="762" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="moon" catalog="system"/>
+                                <connections>
+                                    <action selector="chillButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTt-3U-T6x"/>
+                                    <segue destination="9wW-iC-4NK" kind="show" identifier="vcContinue" id="6ZO-TZ-UVS"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-AS-9fE">
+                                <rect key="frame" x="304" y="59" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" systemColor="labelColor"/>
+                                <connections>
+                                    <action selector="DarkMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="SGF-Dy-Tfr"/>
+                                </connections>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="figure.run" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f0p-2A-ZGe">
+                                <rect key="frame" x="112" y="161.33333333333331" width="168" height="151.99999999999994"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="chronoButton" destination="kWJ-Fc-ebf" id="2wU-jL-uow"/>
+                        <outlet property="chrono_Text" destination="zys-1D-7oa" id="49t-3H-iFc"/>
+                        <outlet property="figureImage" destination="f0p-2A-ZGe" id="KAW-rn-1Ir"/>
+                        <outlet property="moonButton" destination="eM2-Ec-OyA" id="2xZ-Us-RMQ"/>
+                        <outlet property="restartButton" destination="HOT-ir-Ox4" id="8mp-VF-TxU"/>
+                        <outlet property="stopChronoButton" destination="kF7-wk-pQW" id="i8Q-uA-naA"/>
+                        <outlet property="switchMode" destination="qfr-AS-9fE" id="C1h-t9-knh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+        <!--Chill View Controller-->
+        <scene sceneID="VWy-ei-FAz">
+            <objects>
+                <viewController storyboardIdentifier="ChillViewController" id="9wW-iC-4NK" customClass="ChillViewController" customModule="FocusFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n0y-rZ-MIz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9n-Wz-WcX">
+                                <rect key="frame" x="109.66666666666669" y="385" width="174" height="72"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powersleep" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KpS-sR-x5N">
+                                <rect key="frame" x="118.66666666666669" y="152.66666666666666" width="156" height="146.99999999999997"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="4lA-Px-BfO"/>
+                                    <constraint firstAttribute="height" constant="149" id="9l0-2L-z1T"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zsx-Cy-qaw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E9n-Wz-WcX" firstAttribute="centerY" secondItem="n0y-rZ-MIz" secondAttribute="centerY" id="8sV-Io-UDC"/>
+                            <constraint firstItem="E9n-Wz-WcX" firstAttribute="centerX" secondItem="n0y-rZ-MIz" secondAttribute="centerX" id="RD9-k1-wNs"/>
+                            <constraint firstItem="KpS-sR-x5N" firstAttribute="centerX" secondItem="n0y-rZ-MIz" secondAttribute="centerX" id="g1c-Ei-x2D"/>
+                            <constraint firstItem="E9n-Wz-WcX" firstAttribute="top" secondItem="KpS-sR-x5N" secondAttribute="bottom" constant="85" id="u00-x7-IBF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LjP-gf-p1e"/>
+                    <connections>
+                        <outlet property="chronoText" destination="E9n-Wz-WcX" id="qUw-YT-hdk"/>
+                        <outlet property="figureIcon" destination="KpS-sR-x5N" id="VC6-2n-YTc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3H-Vv-zGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1122.9007633587785" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="labelColor"/>
+    <resources>
+        <image name="arrow.clockwise.circle" catalog="system" width="128" height="123"/>
+        <image name="figure.run" catalog="system" width="115" height="128"/>
+        <image name="moon" catalog="system" width="128" height="123"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="powersleep" catalog="system" width="125" height="128"/>
+        <image name="stop.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
